@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Blobstore example</title>
+<meta charset="utf-8"/>
+</head>
+<body>
+Blobstore example below is a form for uploading a file to the
+blobstore<br/><br/>
+<!-- form for uploading a file to the blobstore -->
+<form action="{{ upload_url }}" method="post" enctype="multipart/form-data">
+Upload File: <input type="file" name="file" /><br/>
+<input type="submit"/>
+</form>
+<!-- we will then list the blobs that we do have in the datastore
+available to us -->
+{% for i in collection.filenames %}
+{{ i }}
+<form action="/download" method="get">
+<input type="hidden" value="{{ loop.index - 1 }}" name="index" />
+<input type="submit" value="Download" name="Download" />
+</form>
+<br/>
+{% endfor %}
+</body>
+</html>
