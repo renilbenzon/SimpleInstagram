@@ -1,0 +1,17 @@
+<!-- Like & Unlike component for instagram post -->
+
+{% if user and not user.name == instagram.author.name %}
+  {% if instagram.like == 1 %}
+    <form id="form-unlike-post" method="post" action="/unlike/{{instagram.key.id()}}">
+      <a onclick="document.getElementById('form-unlike-post').submit()">
+        <span class="glyphicon glyphicon-heart"></span>
+      </a>
+    </form>
+  {% else %}
+    <form id="form-like-post" method="post" action="/like/{{instagram.key.id()}}">
+      <a onclick="document.getElementById('form-like-post').submit()">
+        <span class="glyphicon glyphicon-heart-empty"></span>
+      </a>
+    </form>
+  {% endif %}
+{% endif %}

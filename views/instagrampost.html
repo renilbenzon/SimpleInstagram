@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% for instagram in instagrams %}
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">{{instagram.subject}}</h3>
+      </div>
+      <div class="panel-body">{{instagram.content | safe}}</div>
+    
+      <div class="panel-footer text-right">
+
+        {% if user.name == instagram.author.name %}
+          <p class="pull-left author-by"><span>My Post</span></p>
+        {% else %}
+          <p class="text-left author-by">Author: {{instagram.author.name}}</p>
+        {% endif %}
+
+        {% include "like-unlike-post.html" %}
+
+        {% if user.name == instagram.author.name %}
+          <a href="/edit/{{instagram.key.id()}}">
+            <span class="glyphicon glyphicon-pencil"></span>
+          </a>
+          <form id="form-delete-post" method="post" action="/delete/{{instagram.key.id()}}">
+            <a onclick="document.getElementById('form-delete-post').submit()">
+              <span class="glyphicon glyphicon-remove"></span>
+            </a>
+          </form>
+        {% endif %}
+
+      </div><!-- /panel-footer -->
+    </div><!-- /panel -->
+
+    {% include "new-comment.html" %}
+    {% include "show-comments.html" %}
+  {% endfor %}
+{% endblock %}

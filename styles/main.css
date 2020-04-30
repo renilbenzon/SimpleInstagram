@@ -1,0 +1,221 @@
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: linear-gradient(#fff, #00d3fe) fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Default text color for most of the text */
+a,
+h3,
+h6,
+label,
+.author-by,
+.form-control,
+.panel-title {
+  color: #545252;
+}
+
+/* Custom page header */
+.header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #545252;
+}
+
+/*
+ * Header & Nav Style
+*/
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+.nav > li > a {
+  font-weight: 700;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background: transparent;
+  outline: none;
+  outline-offset: none;
+  color: #f36c0c;
+}
+
+/*
+ * Panel's Style
+ */
+.panel-comment {
+  margin: 20px;
+}
+
+.panel-comment .author-by,
+.panel-comment .comment-tool {
+  display: inline-block;
+}
+
+.panel-comment .panel-body {
+  padding-bottom: 5px;
+}
+
+.panel-comment .panel-footer  {
+  margin-bottom: 10px;
+}
+
+.panel-comment .comment-tool {
+  float: right;
+  margin-top: 10px;
+}
+
+.panel-comment .author-by span {
+  margin: 0;
+  font-size: 13px;
+}
+
+.panel,
+.panel-heading,
+.panel-footer {
+  border-width: 0;
+}
+
+.panel-default > .panel-heading,
+.panel-footer {
+  background-color: transparent;;
+}
+
+/*
+ * Form Style
+ */
+ #form-delete-post,
+ #form-like-post,
+ #form-unlike-post,
+ #form-delete-comment {
+   display: inline-block;
+ }
+
+ #form-delete-post a,
+ #form-like-post a,
+ #form-unlike-post a,
+ #form-delete-comment a {
+   cursor: pointer;
+ }
+
+.form {
+  background: #fff;
+  padding: 15px 15px 5px 15px;
+  border-radius: 10px;
+}
+
+.form-control,
+.form-control:focus {
+  border-radius: 0;
+  border: 0;
+  border-bottom: 1px solid #f36c0c;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+textarea {
+  border: 1px solid #f36c0c !important;
+  border-radius: 5px !important;
+  resize: vertical;
+}
+
+.error {
+  color: red;
+}
+
+/*
+ * Button & Span Style
+ */
+
+
+span {
+  margin: 0 5px;
+  font-size: 16px;
+}
+
+a, a:hover {
+  text-decoration: none;
+  background: transparent;
+  transition: all 0.5s ease;
+}
+
+a:hover {
+  opacity: .4;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background: #f36c0c !important;
+  border-color: #f36c0c !important;
+  outline: none !important;
+  outline-offset: none !important;
+}
+
+/*
+ * Styling the author's
+ * text name
+ */
+.author-by {
+  font-weight: 500;
+}
+
+.author-by span {
+  font-size: 14px;
+  color: #ada8a8;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+}
