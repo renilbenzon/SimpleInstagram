@@ -1,0 +1,19 @@
+
+
+{% extends "base.html" %}
+
+{% block title %} List | {% endblock %}
+{% if user %}
+  {% block section %}
+  {% endblock %}
+{% endif %}
+{% block content %}
+<h4 style="color:blue;">List of Electric Vehicles</h4>
+<div>
+{% if newevs|length == 0 %} -- No Electric Vehicles found -- {% endif %}
+<ol type="1">
+{% for newev in newevs %}
+  <li><a href="/newev?evname={{ newev.evname }}">{{ newev.evname }}</a></li>
+{% endfor %}
+</ol>
+{% endblock %}

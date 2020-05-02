@@ -1,13 +1,17 @@
 <div class="header clearfix">
   <nav>
     <ul class="nav nav-pills pull-right">
-      <li role="presentation"><a href="/">Instagram</a></li>
+
       {% if user %}
-        <li role="presentation"><a href="/newpost">New Post</a></li>
+
+        <li role="presentation"><a href="/newpost">Text Post</a></li>
         <li role="presentation"><a href="/logout">Log Out</a></li>
+        <li role="presentation"><a href="/image">Image post</a></li>
       {% else %}
         <li role="presentation"><a href="/login">Login</a></li>
         <li role="presentation"><a href="/signup">Sign Up</a></li>
+        <li role="presentation"><a href="/userlist">List</a></li>
+
       {% endif %}
     </ul>
   </nav>

@@ -4,8 +4,8 @@ from main import Controller
 from models.instagram_model import Instagram
 from models.comments_model import Comments
 from google.appengine.ext import ndb
-from google.appengine.api import images
-
+from models.users_model import User
+from account_controller import *
 class NewPost(Controller):
 
     """ New Post Page """
@@ -24,7 +24,8 @@ class NewPost(Controller):
             b = Instagram(subject=subject,
                      content=content,
 
-                     author=self.user)
+                     author=self.user,
+                     uname=self.user)
             b.put()
             time.sleep(0.1)  # sleep is used due to lag time
             self.redirect('/%d' % b.key.id())  # redirect to permalink

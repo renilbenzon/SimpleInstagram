@@ -18,4 +18,4 @@ class Instagram(ndb.Model):
     created = ndb.DateTimeProperty(auto_now_add=True)
     like = ndb.IntegerProperty(default=0)
     subject = ndb.StringProperty(required=True)
-    
+    uname = ndb.StructuredProperty(User)
